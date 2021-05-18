@@ -13,7 +13,7 @@ export default function PageACount() {
             <div>
                 当前共 <b>{count}</b> 条数据
             </div>
-            <span onClick={onReset}>点击重置</span>
+            <span onClick={onReset}>点击重置数据</span>
         </>
     )
 }
