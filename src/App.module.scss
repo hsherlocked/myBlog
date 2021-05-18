@@ -1,0 +1,8 @@
+.appcontainer {
+    & > span:nth-child(1) {
+        color: pink;
+    }
+    & > span:nth-child(2) {
+        color: orange;
+    }
+}
