@@ -4,7 +4,7 @@
 
 ## 项目构建
 
-git clone https://github.com/hsherlocked/yhl-snowpack-project.git
+git clone https://github.com/hsherlocked/yhl-snowpack-project.git 到本地
 
 
 ## 安装第三方依赖
