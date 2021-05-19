@@ -7,37 +7,35 @@ module.exports = {
     plugins: [
         '@snowpack/plugin-react-refresh',
         '@snowpack/plugin-dotenv',
+        ['@snowpack/plugin-sass', {}],
         [
-            '@snowpack/plugin-sass',
-            {},
+            '@snowpack/plugin-babel',
+            {
+                input: ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
+                transformOptions: {
+                    presets: ['@babel/preset-react'],
+                },
+            },
         ],
         [
-            "@snowpack/plugin-babel",
+            '@snowpack/plugin-run-script',
             {
-                "input": ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
-                transformOptions: {
-                    "presets": ["@babel/preset-react"]
-                }
-            }
-        ]
+                cmd: 'npm run prettier-write && npm run prettier-watch',
+            },
+        ],
     ],
-    routes: [
-        
-    ],
-    optimize: {
-        
-    },
-    packageOptions: {
-        
-    },
+    routes: [],
+    optimize: {},
+    packageOptions: {},
     devOptions: {
         hostname: 'localhost',
         port: 8888,
     },
     buildOptions: {
-       
+        sourcemap: true,
+        watch: true,
     },
     alias: {
-        '@': './src'
+        '@': './src',
     },
-};
+}
