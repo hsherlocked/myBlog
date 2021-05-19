@@ -1,25 +1,18 @@
-# New Project
+# 简介
+基于snowpack搭建的一个小demo，所用技术栈为react hook，状态管理使用recoil，配合eslint和prettier完善代码
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+## 项目构建
 
-## Available Scripts
+
+
+## 安装第三方依赖
+
+### npm install
+
+确保本地安装了 node 和 npm，在项目根目录下（cmd环境）执行 npm install
+
+## 运行
 
 ### npm start
 
-Runs the app in the development mode.
-Open http://localhost:8888 to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.js` config file.
-
-### npm test
-
-Launches the application test runner.
-Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+打开浏览器，地址栏输入http://localhost:8888
