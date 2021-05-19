@@ -1,4 +1,7 @@
 {
+    "author": "yhl",
+    "version": "0.0.1",
+    "keywords": ["snowpack", "react hook", "eslint", "prettier"],
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
