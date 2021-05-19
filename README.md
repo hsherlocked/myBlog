@@ -17,4 +17,4 @@ git clone https://github.com/hsherlocked/yhl-snowpack-project.git
 
 ### npm start
 
-打开浏览器，地址栏输入http://localhost:8888
+打开浏览器，地址栏输入http://localhost:8888查看项目
