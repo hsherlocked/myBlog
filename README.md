@@ -1,8 +1,10 @@
 # 简介
+
 基于snowpack搭建的一个小demo，所用技术栈为react hook，状态管理使用recoil，配合eslint和prettier完善代码
 
 ## 项目构建
 
+git clone https://github.com/hsherlocked/yhl-snowpack-project.git
 
 
 ## 安装第三方依赖
