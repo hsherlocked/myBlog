@@ -20,7 +20,7 @@ function App() {
     return (
         <div className={appcontainer}>
             <span>{name}</span>
-            <button onClick={onClick}>click me</button>
+            <button onClick={onClick}>click me!</button>
             <PageA />
             <PageB />
         </div>
