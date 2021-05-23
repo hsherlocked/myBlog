@@ -1,4 +1,5 @@
-/** @type {import("snowpack").SnowpackUserConfig } */
+const proxy = require('http2-proxy')
+
 module.exports = {
     mount: {
         public: { url: '/', static: true },
@@ -20,20 +21,33 @@ module.exports = {
         [
             '@snowpack/plugin-run-script',
             {
-                cmd: 'npm run prettier-write && npm run prettier-watch',
+                cmd: 'eslint src --ext .js,.jsx,.ts,.tsx',
+                watch: 'esw -w --fix src --ext .js,.jsx,.ts,.tsx',
             },
         ],
     ],
-    routes: [],
+    routes: [
+        {
+            src: '/api/.*',
+            dest: (req, res) => {
+                req.url = req.url.replace(/^\/api/, '')
+                return proxy.web(req, res, {
+                    hostname: 'localhost',
+                    port: 8081,
+                })
+            },
+        },
+    ],
     optimize: {},
     packageOptions: {},
     devOptions: {
         hostname: 'localhost',
         port: 8888,
+        hmrErrorOverlay: true,
     },
     buildOptions: {
-        sourcemap: true,
-        watch: true,
+        // sourcemap: true,
+        // watch: true,
     },
     alias: {
         '@': './src',

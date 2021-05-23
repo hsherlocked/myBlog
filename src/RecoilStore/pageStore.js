@@ -1,4 +1,5 @@
 import { atom, selector } from 'recoil'
+/* eslint-disable */
 export const userListActionAtom = atom({
     key: 'userListActionAtomKey',
     default: [{ id: 0, name: 'default', age: 0 }],

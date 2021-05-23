@@ -1,18 +1,25 @@
 {
-    "author": "yhl",
-    "version": "0.0.1",
-    "keywords": ["snowpack", "react hook", "eslint", "prettier"],
+  "author": "yhl",
+  "version": "0.0.1",
+  "keywords": [
+    "snowpack",
+    "react hook",
+    "eslint",
+    "prettier"
+  ],
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.jsx\"",
-    "prettier-write": "prettier --write \"src/**/*.{js,jsx,html,scss}\"",
-    "prettier-watch": "onchange \"src/**/*\" -- prettier --write {{changed}}"
+    "eslint-check": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "eslint-watch": "esw -w --fix src --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "antd": "^4.15.6",
+    "axios": "^0.21.1",
     "echarts": "^5.1.1",
     "echarts-for-react": "^3.0.1",
+    "http2-proxy": "^5.0.53",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "recoil": "^0.3.0"
@@ -29,7 +36,11 @@
     "@web/test-runner": "^0.13.3",
     "chai": "^4.3.4",
     "eslint": "^7.26.0",
-    "onchange": "^7.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-watch": "^7.0.0",
     "prettier": "^2.2.1",
     "snowpack": "^3.3.7"
   }

@@ -4,9 +4,7 @@ import { userListSelector } from '@/RecoilStore/pageStore'
 import { useSetRecoilState } from 'recoil'
 
 export default function PageB() {
-    // 只写，调用时会触发userListSelector的set方法
     const setList = useSetRecoilState(userListSelector)
-
     const [name, setName] = useState('')
     const [age, setAge] = useState('')
 

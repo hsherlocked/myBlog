@@ -9,7 +9,6 @@ const rnd = (min, max) => {
 }
 
 export default function PageA() {
-    // 读写，调用setUserList时会触发userListSelector的set方法
     const [userList, setUserList] = useRecoilState(userListSelector)
 
     const onModifyItem = data => {

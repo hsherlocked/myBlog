@@ -4,7 +4,9 @@
         "es2021": true
     },
     "extends": [
-        "plugin:react/recommended"
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -17,12 +19,13 @@
         "react"
     ],
     "rules": {
-        "no-console": "error",
         "no-unused-vars": "error",
         "react/prop-types": 0,
-        "no-trailing-spaces": 2,
-        "no-var": 2,
-        "space-infix-ops": 2,
         "eqeqeq": 2
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }
